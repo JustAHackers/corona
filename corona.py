@@ -23,7 +23,7 @@ while True:
 				a=requests.get("https://api.kawalcorona.com/indonesia/provinsi/").text
 				pat = re.findall(r'"Provinsi":"(.*?)","Kasus_Posi":(.*?),"Kasus_Semb":(.*?),"Kasus_Meni":(.*?)}}',a)
 				for i in pat:
-					print ("\n========== "+i[0]+" ===========")
+					print ("\n\x1b[1;35m========== "+i[0]+" ===========")
 					print ("\x1b[1;33mTerinfeksi : "+str(i[1]))
 					print ("\x1b[1;32mSembuh     : "+str(i[2]))
 					print ("\x1b[1;31mMati       : "+str(i[3])+"\x1b[1;39m")
